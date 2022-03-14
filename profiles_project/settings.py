@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-3f^f*e+d!t#^fpc7!q49f_*sc_n0h_%3)%miinfh(r6pd2mp5u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['profiles-rest-api-demo.herokuapp.com']
+ALLOWED_HOSTS = ['profiles-rest-api-demo.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -120,9 +120,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
-STATIC_ROOT = "/static/"
-AUTH_USER_MODEL = 'profiles_api.UserProfile'
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
